@@ -3,6 +3,13 @@ Windows DNS API (Node.JS)
 
 A simple Node.JS server for updating the integrated DNS server that ships with windows.
 
+Requirements:
+ - Windows Server 2008 and above
+ - DNS Server Role
+ - Open firewall port 3111 
+ - Access to %WINDIR%\system32\dns
+
+
 Quick start:
 
     npm i
@@ -24,8 +31,8 @@ Operations:
     > curl http://localhost:3111/dns/test.com/raw
     
     # Set record http:// <dns-host> :3111/dns/ <zone> /a/ <node> /set/ <ip>
-    > curl http://dns-server.acme.local:3111/dns/acme.local/a/server1/set/1.2.3.4
+    > curl http://localhost:3111/dns/acme.local/a/server1/set/1.2.3.4
     
     # http:// <dns-host> :3111/dns/ <zone> /a/ <node> /remove
-    > curl http://dns-server.acme.local:3111/dns/acme.local/a/server1/remove    
+    > curl http://localhost:3111/dns/acme.local/a/server1/remove    
     
