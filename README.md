@@ -19,8 +19,17 @@ The app implements a basic Restify driven REST API that translates HTTP requests
 
 So, without further adieu, here are the two supported commands and how they translate to dnscmd.
 
-    # http:// <dns-host> :3111/dns/ <zone> /a/ <node> /set/ <ip>
-    http://dns-server.acme.local:3111/dns/acme.local/a/server1/set/1.2.3.4
+    # Get available zones http:// <dns-host> :3111/dns/
+    > curl http://localhost:3111/dns
+    
+    # Get zone records as JSON http:// <dns-host> :3111/dns/:zone
+    > curl http://localhost:3111/dns/test.com
+    
+    # Get zone file in raw format http:// <dns-host> :3111/dns/:zone/raw
+    > curl http://localhost:3111/dns/test.com/raw
+    
+    # Set record http:// <dns-host> :3111/dns/ <zone> /a/ <node> /set/ <ip>
+    > curl http://dns-server.acme.local:3111/dns/acme.local/a/server1/set/1.2.3.4
     
     # First, delete any existing records
     > dnscmd /recorddelete acme.local server1 A /f
