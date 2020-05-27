@@ -6,7 +6,7 @@ A simple Node.JS server for updating the integrated DNS server that ships with w
 Requirements:
  - Windows Server 2008 and above
  - DNS Server Role
- - Open firewall port 3111 
+ - Allow traffic to port 3111 
  - Access to %WINDIR%\system32\dns
 
 
