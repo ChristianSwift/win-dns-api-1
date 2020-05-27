@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./lib/server.js",
+    "build-exec": "pkg . --target win-x64 --out-path build"
   },
+  "bin": "./lib/server.js",
   "dependencies": {
-    "restify": "~2.6.1",
-    "forever-monitor": "~1.2.3"
+    "forever-monitor": "~2.0.0",
+    "node-windows": "^1.0.0-beta.1",
+    "restify": "~8.5.1",
+    "restify-errors": "^8.0.2",
+    "zonefile-parser": "^1.0.1"
   }
 }
