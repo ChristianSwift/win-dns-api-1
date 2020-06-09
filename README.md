@@ -30,9 +30,9 @@ Operations:
     # Get zone file in raw format http:// <dns-host> :3111/dns/:zone/raw
     > curl http://localhost:3111/dns/test.com/raw
     
-    # Set record http:// <dns-host> :3111/dns/ <zone> /a/ <node> /set/ <ip>
+    # Set record http:// <dns-host> :3111/dns/:zone/:type/:node/set/:ip
     > curl http://localhost:3111/dns/acme.local/a/server1/set/1.2.3.4
     
-    # http:// <dns-host> :3111/dns/ <zone> /a/ <node> /remove
+    # Remove record http:// <dns-host> :3111/dns/:zone/:type/:node/remove
     > curl http://localhost:3111/dns/acme.local/a/server1/remove    
     
